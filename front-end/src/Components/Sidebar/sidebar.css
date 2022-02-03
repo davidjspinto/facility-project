@@ -1,0 +1,44 @@
+.sidebar {
+    /*position: fixed;*/
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    height: 92vh;
+    width: 10vw;
+    /*-webkit-box-shadow: 5px 5px 35px 5px lightgrey; 
+    box-shadow: 10px 10px 10px 0px lightgrey;*/
+  }
+
+.menu {
+    border-color: transparent;
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-align: center;
+    letter-spacing: var(--spacing);
+    transition: var(--transition);
+    line-height: 1;
+    outline-color: var(--clr-primary-10);
+}
+
+.tab-btn {
+    background: transparent;
+    border-color: transparent;
+    text-transform: capitalize;
+    font-size: 1.25rem;
+    letter-spacing: var(--spacing);
+    margin: 0 0.5rem;
+    transition: var(--transition);
+    cursor: pointer;
+    padding: 1rem;
+    line-height: 1;
+    outline-color: var(--clr-primary-10);
+  }
+  .tab-btn:hover {
+    color: var(--clr-primary-5);
+    box-shadow: 0 2px var(--clr-primary-5);
+  }
+  .active-tab {
+    color: var(--clr-primary-5);
+    box-shadow: 0 2px var(--clr-primary-5);
+  }
+  

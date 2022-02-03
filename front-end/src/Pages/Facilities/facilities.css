@@ -1,0 +1,57 @@
+th {
+    font-size: 16px;
+    background-color: #427AA1;
+    color: white;
+  }
+
+th, td {
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+tr:hover {background-color: rgb(205, 226, 223);}
+
+.show-new-row{
+    height: 18px;
+}
+
+.null{
+    visibility: hidden;
+}
+
+.facilities-display{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-and-content{
+    display: flex;
+    flex-direction: row;
+}
+
+.facility-list-display{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    margin: 3rem;
+}
+
+.input-field-facility-list{
+    border: 1px solid lightgrey;
+    background-color: white;
+}
+
+.facility-submit-btn{
+    font-size: 1rem;
+    font-weight: 300;
+    color: white;
+    padding: 0.5rem;
+    margin:0.5rem;
+    background-color: #427AA1;
+}
+
+.facility-submit-btn:active{
+    background-color: #F2FDFF;
+}
