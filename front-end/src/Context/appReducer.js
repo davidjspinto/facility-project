@@ -23,6 +23,12 @@ const appReducer = (state, action) => {
       isCompanyFormOpen: true,
     };
   }
+  if (action.type === "START_LEGIONELLA_EVALUATION") {
+    return {
+      ...state,
+      isLegionellaEvaluationOpen: true,
+    };
+  }
   /*
   if (action.type === "SUBMIT_LOGIN") {
     return {

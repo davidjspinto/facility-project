@@ -2,17 +2,17 @@ import React, {
     createContext,
     useContext,
     useReducer,
-    useRef,
     useEffect,
     useState,
   } from "react";
-  import {useNavigate, Link} from "react-router-dom"
+  import {useNavigate} from "react-router-dom"
   import appReducer from "./appReducer";
   import Axios from "axios";
   
   const FacilityContext = createContext();
   
   const facilityPageState = {
+    isLegionellaEvaluationOpen: false,
     isRegisterLoginModalOpen: false,
     isRegisterTabOpen: false,
     isCompanyFormOpen: false
@@ -33,6 +33,8 @@ import React, {
     const openLoginTab = () => dispatch({ type: "OPEN_LOGIN_TAB"});
 
     const addCompanyInfo = () => dispatch({ type: "OPEN_COMPANY_FORM"});
+
+    const startLegionellaAssessment = () => dispatch({ type: "START_LEGIONELLA_EVALUATION"});
 
     const handleRegisterInput = (event) => {
       const name = event.target.name;
@@ -64,7 +66,6 @@ import React, {
 
     const submitRegisterForm = (event) => {
       event.preventDefault();
-      navigate(path);
       Axios.post("http://localhost:4000/auth/register", {
         username: registerInput.username,
         email: registerInput.email,
@@ -145,9 +146,10 @@ import React, {
       value={{
         ...state,
         addCompanyInfo,
-        
+        startLegionellaAssessment,
         submitCompanyInformation,
         startRegisterLogin,
+        
         openRegisterTab,
         openLoginTab,
         submitRegisterForm,
@@ -160,7 +162,8 @@ import React, {
         registerInput,
         facilityList,
         facilityInputs,
-        isNewFacilityDataOpen, 
+        isNewFacilityDataOpen,
+       
         handleButtonAddFacility, 
         handleAddFacilityFormSubmit, 
         handleFacilityInputChange,

@@ -1,3 +1,7 @@
+table{
+    table-layout: auto;
+}
+
 th {
     font-size: 16px;
     background-color: #427AA1;
@@ -34,7 +38,7 @@ tr:hover {background-color: rgb(205, 226, 223);}
 .facility-list-display{
     display: flex;
     flex-direction: column;
-    width: 80vw;
+    width: 70vw;
     margin: 3rem;
 }
 
@@ -54,4 +58,19 @@ tr:hover {background-color: rgb(205, 226, 223);}
 
 .facility-submit-btn:active{
     background-color: #F2FDFF;
+}
+
+.facility-list-title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.facility-list-btn {
+    background-color: rgb(197, 214, 208);
+    border: 0px solid white;
+    padding: 8px;
+    margin-right:15px;
+    width: 3vw;
 }
