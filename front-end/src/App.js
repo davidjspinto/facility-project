@@ -15,7 +15,6 @@ function App() {
       <Route path="dashboard/profile" element={<Profile />} />
       <Route path="dashboard/facilities" element={<Facilities />} /> 
       <Route path="dashboard/facility/:facilityName" element={<SingleFacility />} />
-    
     </Routes> 
   );
 }
